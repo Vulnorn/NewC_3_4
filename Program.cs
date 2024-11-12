@@ -9,13 +9,9 @@ namespace NewC_3_4
             const string CommandExit = "exit";
             const string CommandSum = "summ";
 
-            int lengthArray = 0;
-            int sumNumbers = 0;
-            string inputUser;
             bool isWork = true;
 
-            string[] numbers = new string[lengthArray];
-            string[] bufferArray;
+            int[] numbers = new int[0];
 
             while (isWork)
             {
@@ -31,7 +27,7 @@ namespace NewC_3_4
                     $"\n{CommandSum} - посчитать сумму всех чисел" +
                     $"\n{CommandExit} - Выход.");
 
-                inputUser = Console.ReadLine();
+               string inputUser = Console.ReadLine();
 
                 switch (inputUser)
                 {
@@ -40,10 +36,11 @@ namespace NewC_3_4
                         break;
 
                     case CommandSum:
+                        int sumNumbers = 0;
+
                         for (int i = 0; i < numbers.Length; i++)
-                        {
-                            if (int.TryParse(numbers[i], out int number) == true)
-                                sumNumbers += number;
+                        {        
+                                sumNumbers += numbers[i];
                         }
 
                         Console.WriteLine($"Сумма всех чисел в массиве - {sumNumbers}");
@@ -51,14 +48,14 @@ namespace NewC_3_4
                         break;
 
                     default:
-                        bufferArray = new string[numbers.Length + 1];
+                        int[] bufferArray = new int[numbers.Length + 1];
 
                         for (int i = 0; i < numbers.Length; i++)
                         {
                             bufferArray[i] = numbers[i];
                         }
 
-                        bufferArray[bufferArray.Length - 1] = inputUser;
+                        bufferArray[bufferArray.Length - 1] = Convert.ToInt32(inputUser);
                         numbers = bufferArray;
                         break;
                 }
