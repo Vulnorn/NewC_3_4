@@ -11,7 +11,6 @@ namespace NewC_3_4
 
             int lengthArray = 1;
             int sumNumbers = 0;
-            int number;
             string inputUser;
             bool isWork = true;
 
@@ -43,7 +42,7 @@ namespace NewC_3_4
                     case CommandSum:
                         for (int i = 0; i < numbers.Length; i++)
                         {
-                            if (int.TryParse(numbers[i], out number) == true)
+                            if (int.TryParse(numbers[i], out int number) == true)
                                 sumNumbers += number;
                         }
 
