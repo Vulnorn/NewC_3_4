@@ -29,8 +29,8 @@ namespace NewC_3_4
 
                 Console.WriteLine($"\nВведите действие" +
                     $"\nВвод - Добавить число в массив" +
-                    $"\n{CommandExit} - посчитать сумму всех чисел" +
-                    $"\n{CommandSum} - Выход.");
+                    $"\n{CommandSum} - посчитать сумму всех чисел" +
+                    $"\n{CommandExit} - Выход.");
 
                 inputUser = Console.ReadLine();
 
