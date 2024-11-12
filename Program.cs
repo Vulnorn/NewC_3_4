@@ -9,7 +9,7 @@ namespace NewC_3_4
             const string CommandExit = "exit";
             const string CommandSum = "summ";
 
-            int lengthArray = 1;
+            int lengthArray = 0;
             int sumNumbers = 0;
             string inputUser;
             bool isWork = true;
